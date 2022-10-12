@@ -1,0 +1,32 @@
+@font-face {
+    font-family: firma-regular;
+    src: url('./br-firma/BR\ Firma\ Regular.otf');
+}
+@font-face {
+    font-family: firma-black;
+    src: url('./br-firma/BR\ Firma\ Black.otf');
+}
+@font-face {
+    font-family: firma-bold;
+    src: url('./br-firma/BR\ Firma\ Bold.otf');
+}
+@font-face {
+    font-family: firma-extra-light;
+    src: url('./br-firma/BR\ Firma\ Extra\ Light.otf');
+}
+@font-face {
+    font-family: firma-light;
+    src: url('./br-firma/BR\ Firma\ Light.otf');
+}
+@font-face {
+    font-family: firma-medium;
+    src: url('./br-firma/BR\ Firma\ Medium.otf');
+}
+@font-face {
+    font-family: firma-semi-bold;
+    src: url('./br-firma/BR\ Firma\ SemiBold.otf');
+}
+@font-face {
+    font-family: firma-thin;
+    src: url('./br-firma/BR\ Firma\ Thin.otf');
+}
