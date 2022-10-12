@@ -32,7 +32,11 @@ body {
 /* ************************************************* */
 /* GLOBAL STYLES TO AVOID REPITITIONS */
 
-.flex,.flex-wrap{display: flex; flex-direction: row;}
+.flex,.flex-wrap{display: flex; flex-direction: column;}
 .flex-wrap{flex-wrap: wrap;}
 li{list-style-type: none;}
 a{text-decoration: none; color: inherit;}
+
+@media only screen and (min-width: 600px) {
+  .flex,.flex-wrap{flex-direction: row;}
+}

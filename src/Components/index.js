@@ -10,3 +10,4 @@ export { default as SearchBar} from './Molecules/SearchBar'
 
 // Organs Export
 export { default as Header} from './Organs/Header'
+export { default as Carousel} from './Organs/Carousel'
