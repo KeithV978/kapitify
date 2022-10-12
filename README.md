@@ -1,3 +1,3 @@
 ## Kapitify
 
-The world's first online barter platform
+Nigeria's numero uno online barter platform
