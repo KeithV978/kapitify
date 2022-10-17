@@ -46,6 +46,10 @@ const SwapperProfile = ({profile}) => {
             height: 17px;
             border-radius: 50%;
         }
+        h3 {
+            word-wrap: break-word;
+            width: min-content;
+        }
 `;
     return (
         <Wrapper>

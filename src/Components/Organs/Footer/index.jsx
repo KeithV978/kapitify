@@ -23,6 +23,8 @@ img{width: 100%;}
 .footer_list ul li{margin: 4rem 0;}
 .copyright{text-align: center;}
 .copyright h4{line-height:40px;}
+.badge-coming{background-color: var(--primary); color: #fff; padding: .5rem .7rem; border-radius: 25px; font-size: .9rem}
+.pro-link{display: flex; flex-direction: row; gap:1rem}
 `;
 const Footer = () => {
   return (
@@ -62,7 +64,7 @@ const Footer = () => {
                             <ul>
                                {links.map((link)=>{
                                 return  <li key={link}>
-                                            <a href="https://kapitify.com/">{link}</a>
+                                            <a href="https://kapitify.com/">{link === "Kapitify Pro"? <span className='pro-link'><p>{link}</p> <span className="badge-coming">Coming Soon</span> </span> : link}</a>
                                         </li>
                                })}
                             </ul>

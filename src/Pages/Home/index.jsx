@@ -6,6 +6,7 @@ import { PopularSwapper } from './PopularSwappers';
 
 // icons import
 import arrow from '../../assets/icons/arrow.svg';
+import white_arrow from '../../assets/icons/white_arrow.svg'
 import open_offers from '../../assets/icons/open_offers.svg'
 
 import profile_img from '../../assets/images/a.jpg'
@@ -53,7 +54,7 @@ const ProductsWrapper = ({title, data}) => {
             <p>{title}</p> {title==="Open Offers"? <img src={open_offers} alt="open offers"/>: ''}
           </h3> 
           <h3 className='see-all'>
-            <p>See All </p><img src={arrow} alt="See More" className={title === "Open Offers"? "white_arrow": ""}/> 
+            <p>See All </p>  {title==="Open Offers"? <img src={white_arrow} alt="See More" /> : <img src={arrow} alt="See More" />}
           </h3>
         </section>
 
