@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import {SearchBar} from '../../index'
+import {SearchBar, Container} from '../../index'
 
 
 // icons import
@@ -41,20 +41,20 @@ const Header = () => {
       position: relative;
       
       & img { width: 120%;}
-      & span { margin: 0 .7rem 0 0}
+      & span { margin: 0 .7rem 0 0; align-items: center;}
 
      ${props => props.id === "Chat"? 
     ` & :after {
       content: "${props.NoOfChats}";
+      box-shadow: 0px 2px 5px #606060;
       background-color: red;
       color: white;
       // width: 20px ;
-      font-size: .7rem;
+      font-size: .9rem;
       position: absolute;
       border-radius: 10px;
       padding: .1rem .5rem;
-      margin:-7px 0 0 0;
-      top: 0;
+      top: -8px;
       left: 9px;
     }`
       : ``}
@@ -63,7 +63,8 @@ const Header = () => {
     const NoOfChats = 99;
 
   return (
-    <HeaderWrapper className="flex">
+    <Container radius="0">
+      <HeaderWrapper className="flex">
         <div className="flex">
           <img src={Hamburger} alt="Menu" className='menu'/> {/* this has to change. Cannot be an image */}
           <img src={logo} alt="logo" className='logo'/>
@@ -84,6 +85,8 @@ const Header = () => {
             })}
         </section>
     </HeaderWrapper>
+    </Container>
+    
   )
 }
 export default Header;
