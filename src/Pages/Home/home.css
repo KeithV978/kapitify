@@ -1,3 +1,7 @@
+.Home{
+    overflow-x: hidden;
+}
+
 .categories-list{
     padding: 2rem 3rem;
     color: #3f3f3f;
@@ -15,6 +19,9 @@
     align-items: center;
     gap: 1rem;
 }
+[class^="product-"]{
+    overflow-x: hidden;
+} 
 .product-wrapper{
     padding: 1rem 4rem 2rem 4rem;
     margin: 0 0 4rem 0;
@@ -39,11 +46,14 @@
 }
 .products{
     margin:3rem 0;
+    padding: 3rem 1rem;
     display: flex;
     flex-direction: row;
-    gap: 0 3.5rem;
-    
+    /* flex-wrap: wrap; */
+    gap: 3.5rem; 
+    overflow-x: auto;   
 }
+
 .offers{
     padding: 0 0 0 4rem;
 }
@@ -63,5 +73,12 @@
 .profiles_wrapper{
     display: flex;
     flex-direction: row;
-    gap: 0 10rem;
+    flex-wrap: wrap;
+    gap: 0 3rem;    
+    justify-content: space-between;
+}
+@media only screen and (min-width: 900px) {
+    .profiles_wrapper{
+        gap: 0 10rem;
+    }
 }

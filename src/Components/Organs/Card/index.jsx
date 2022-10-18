@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import {Rating} from '../../index'
+
 import verifiedIcon from '../../../assets/icons/verified.svg';
 import popular from '../../../assets/icons/popular.svg';
 import locationIcon from '../../../assets/icons/location.svg';
@@ -34,7 +36,7 @@ position: relative;
     // padding: .4rem 0;
 }
 .location{
-    font-size: 1.2rem; 
+    font-size: 1rem; 
     color: var(--secondary);
     padding-top: .8rem;
     display: flex;
@@ -44,7 +46,7 @@ position: relative;
 }
 .heart{
     position: absolute;
-    bottom: 80px;
+    bottom: 60px;
     right: 10px;
 }
 `;
@@ -58,12 +60,12 @@ const Card = ({product}) => {
         <div className="description">
             <div>
                 <span>
-                    {rating}
+                    <Rating stars={rating}/>
                     <p>{product_name} <br/> <span style={{fontWeight: `bold`}}>Swap</span> {swap_for}</p>
                 </span>
             </div>
         </div>
-        <div className="location"> <img src={locationIcon} alt="location" /> <p>Benin City, Edo State</p></div>
+        <div className="location"> <img src={locationIcon} alt="location" /> <p>{location}</p></div>
         <div className="heart"> <img src={heart} alt="heart" />  </div>
     </Wrapper>
   )

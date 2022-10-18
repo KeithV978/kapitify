@@ -24,11 +24,12 @@ const SwapperProfile = ({profile}) => {
     
     const Wrapper = styled.div`
         text-align: center;
+        width: 100px;
     `;
     const ProfileImage = styled.div`
         border-radius: 50%;
-        width: 150px;
-        height: 150px;
+        width: 100px;
+        height: 100px;
         background-image: url(${p_img});
         background-repeat: no-repeat;
         background-size: cover;

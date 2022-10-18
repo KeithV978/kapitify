@@ -21,32 +21,11 @@ const profiles = [
   {p_img: profile2_img, name: "Olive Lane"},
   {p_img: profile3_img, name: "Esther Bassey"},
   {p_img: profile4_img, name: "Romeo Mbong"},
-  {p_img: profile_img, name: "Adam Andrews"},
-  {p_img: profile2_img, name: "Olive Lane"},
-  {p_img: profile3_img, name: "Desire Olorunda"},
-  {p_img: profile4_img, name: "Romeo Mbong"}
+  {p_img: profile_img, name: "Desire Olorunda"},
+  {p_img: profile2_img, name: "Kunu Maria"}
  ]
-
-const Home = () => {
-  return (
-    <div className='Home'>
-        <Header/>
-        <Hero /> 
-        {[
-          "Recommended", 
-          "Discover Swaps", 
-          "Open Offers"
-        ].map((title)=> {
-            return <ProductsWrapper key={title} title={title} data={products}/> 
-          })}
-        <div className="swappers_profile ">
-          <PopularSwapper profiles={profiles}/>
-        </div>
-        <Footer />
-    </div>
-  )
-}
-const ProductsWrapper = ({title, data}) => {
+ 
+ const ProductsWrapper = ({title, data}) => {
   return (
        <div className={`product-${title === "Open Offers"? `offer`: 'wrapper'}`}>
         <section className='header-text'> 
@@ -67,4 +46,25 @@ const ProductsWrapper = ({title, data}) => {
   )
 }
 
-export default Home
+const Home = () => {
+  return (
+    <div className='Home'>
+        <Header/>
+        <Hero /> 
+        {[
+          "Recommended", 
+          "Discover Swaps", 
+          "Open Offers"
+        ].map((title)=> {
+            return <ProductsWrapper key={title} title={title} data={products}/> 
+          })}
+        <div className="swappers_profile ">
+          <PopularSwapper profiles={profiles}/>
+        </div>
+        <Footer />
+    </div>
+  )
+}
+
+
+export default Home;

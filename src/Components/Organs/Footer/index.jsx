@@ -15,16 +15,24 @@ margin: 4rem 0 0 0;
 
 img{width: 100%;}
 
-.footer_list_section{gap:30rem;padding: 4rem 0 2rem 0;}
+.footer_list_section{gap:3rem 2rem; justify-content: space-around; padding: 4rem 0 2rem 0;}
 .footer_logo{width:120px; padding: 2rem 0;}
 .icon_links{ display: flex; flex-direction: row; gap: 2rem;}
 .social_icons{width: 25px;}
 .title{color: var(--primary); font-family: firma-bold; word-wrap: break-word; width: min-content;}
-.footer_list ul li{margin: 4rem 0;}
+.footer_list {min-width: 200px;}
+.footer_list ul li {margin: 4rem 0;}
 .copyright{text-align: center;}
 .copyright h4{line-height:40px;}
 .badge-coming{background-color: var(--primary); color: #fff; padding: .5rem .7rem; border-radius: 25px; font-size: .9rem}
 .pro-link{display: flex; flex-direction: row; gap:1rem}
+
+@media (min-width: 900px){
+    .footer_list_section{
+        justify-content: space-between;
+    }
+    .footer_list {width: calc(100%/3 - 1rem);}
+}
 `;
 const Footer = () => {
   return (
