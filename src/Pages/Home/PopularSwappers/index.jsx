@@ -1,14 +1,35 @@
+import { useState, useEffect } from "react";
 import styled from "styled-components";
 import { Container } from "../../../Components";
 import popular_swapper from '../../../assets/icons/popular_swappers.svg'
+import arrow from '../../../assets/icons/arrow.svg';
 
 
 export const PopularSwapper = (props) => {
-    let {profiles} = props
+    let {profiles} = props;
+
+    const [screenWidth, setScreenWidth] = useState(window.screen.width);
+
+    useEffect(() =>{
+       window.addEventListener("resize", ()=>{
+        setScreenWidth(window.screen.width)
+       })
+
+      return() =>{
+          window.removeEventListener("resize", ()=>{
+            setScreenWidth(window.screen.width)
+           })
+      }
+  },[])
   return (
     <Container padding="1rem 0">
         <div className="popular_swaps_wrapper">
-            <h3 className="pop_swap_header"><p>Popular Swappers </p><img src={popular_swapper} alt="popular swappers" /></h3>  
+            <section className='header-text'> 
+                <h3 className="pop_swap_header"><p>Popular Swappers </p><img src={popular_swapper} alt="popular swappers" /></h3>  
+                <h3 className='see-all'>
+                {screenWidth < 900? <><p>See All </p> <img src={arrow} alt="See More" /> </>: null}
+                </h3>
+            </section>
             <div className="profiles_wrapper">
                 {profiles.map((profile)=>{
                     return <SwapperProfile key={profile} profile={profile}/>
@@ -40,9 +61,9 @@ const SwapperProfile = ({profile}) => {
             content: "";
             position: absolute;
             top: 0;
-            right: 0;
+            right: -15px;
             background-color: #11f94e;
-            border: 8px solid #fff;
+            border: 7px solid #fff;
             width: 17px;
             height: 17px;
             border-radius: 50%;

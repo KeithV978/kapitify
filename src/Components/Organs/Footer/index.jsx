@@ -27,7 +27,7 @@ img{width: 100%;}
 .badge-coming{background-color: var(--primary); color: #fff; padding: .5rem .7rem; border-radius: 25px; font-size: .9rem}
 .pro-link{display: flex; flex-direction: row; gap:1rem}
 
-@media (min-width: 900px){
+@media (min-width: 700px){
     .footer_list_section{
         justify-content: space-between;
     }
