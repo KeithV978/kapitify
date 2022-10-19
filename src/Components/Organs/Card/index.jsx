@@ -9,7 +9,7 @@ import heart from '../../../assets/icons/love.svg'
 const Wrapper = styled.div`
 box-shadow: -1px 5px 12px #ccc;
 border-radius: 20px;
-padding: 1.5rem 2rem;
+padding: 2rem;
 min-width: 200px;
 position: relative;
 
@@ -25,7 +25,7 @@ position: relative;
     flex-direction: row;
     align-items: center;
     width: fit-content;
-    box-shadow: 3px 4px 4px 0px #ebeaea;
+    box-shadow: 0px 5px 4px 0px #ebeaea;
     color: #737373;
     z-index: 10;
 }
@@ -44,10 +44,18 @@ position: relative;
     align-items: center;
     gap: .4rem;
 }
+.heart-icon{width: 100%;}
 .heart{
+    width: 40px;
     position: absolute;
     bottom: 60px;
     right: 10px;
+}
+
+@media (min-width: 700px){
+    .heart{
+        // width: 40px;
+    }
 }
 `;
 
@@ -66,7 +74,7 @@ const Card = ({product}) => {
             </div>
         </div>
         <div className="location"> <img src={locationIcon} alt="location" /> <p>{location}</p></div>
-        <div className="heart"> <img src={heart} alt="heart" />  </div>
+        <div className="heart"> <img src={heart} alt="heart" className="heart-icon"/>  </div>
     </Wrapper>
   )
 }

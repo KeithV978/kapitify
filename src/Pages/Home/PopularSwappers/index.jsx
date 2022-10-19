@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+// import { useState, useEffect } from "react";
 import styled from "styled-components";
 import { Container } from "../../../Components";
 import popular_swapper from '../../../assets/icons/popular_swappers.svg'
@@ -8,26 +8,27 @@ import arrow from '../../../assets/icons/arrow.svg';
 export const PopularSwapper = (props) => {
     let {profiles} = props;
 
-    const [screenWidth, setScreenWidth] = useState(window.screen.width);
+//     const [screenWidth, setScreenWidth] = useState(window.screen.width);
 
-    useEffect(() =>{
-       window.addEventListener("resize", ()=>{
-        setScreenWidth(window.screen.width)
-       })
+//     useEffect(() =>{
+//        window.addEventListener("resize", ()=>{
+//         setScreenWidth(window.screen.width)
+//        })
 
-      return() =>{
-          window.removeEventListener("resize", ()=>{
-            setScreenWidth(window.screen.width)
-           })
-      }
-  },[])
+//       return() =>{
+//           window.removeEventListener("resize", ()=>{
+//             setScreenWidth(window.screen.width)
+//            })
+//       }
+//   },[])
   return (
     <Container padding="1rem 0">
         <div className="popular_swaps_wrapper">
             <section className='header-text'> 
                 <h3 className="pop_swap_header"><p>Popular Swappers </p><img src={popular_swapper} alt="popular swappers" /></h3>  
                 <h3 className='see-all'>
-                {screenWidth < 900? <><p>See All </p> <img src={arrow} alt="See More" /> </>: null}
+                <p>See All </p> <img src={arrow} alt="See More" />
+                {/* {screenWidth < 900? <><p>See All </p> <img src={arrow} alt="See More" /> </>: null} */}
                 </h3>
             </section>
             <div className="profiles_wrapper">
@@ -44,8 +45,11 @@ const SwapperProfile = ({profile}) => {
     let {name, p_img} = profile;
     
     const Wrapper = styled.div`
-        text-align: center;
-        width: 100px;
+        // text-align: center;
+        // width: 100px;
+
+        text-align: -webkit-center;
+        width: min-content;
     `;
     const ProfileImage = styled.div`
         border-radius: 50%;
@@ -57,11 +61,18 @@ const SwapperProfile = ({profile}) => {
         position: relative;
         margin: 3rem 0;
 
+        @media (min-width: 700px){
+            width: 150px;
+            height: 150px;
+
+            &:after { right: -15px; }
+        }
+
         &:after {
             content: "";
             position: absolute;
             top: 0;
-            right: -15px;
+            right: 0;
             background-color: #11f94e;
             border: 7px solid #fff;
             width: 17px;
@@ -70,7 +81,7 @@ const SwapperProfile = ({profile}) => {
         }
         h3 {
             word-wrap: break-word;
-            width: min-content;
+            width: inherit;
         }
 `;
     return (
