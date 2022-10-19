@@ -2,8 +2,8 @@ import { useState, useEffect } from "react";
 import styled from "styled-components";
 
 import carousel from '../../../assets/slider_image.jpg';
-// import locationIcon from '../../../assets/icons/location2.svg';
-// import sortIcon from '../../../assets/icons/sort.svg';
+import locationIcon from '../../../assets/icons/Gps_fixed.svg';
+import menuIcon from '../../../assets/icons/Menu.svg';
 
 
 const Hero = () => {
@@ -26,7 +26,7 @@ display: flex;
 flex-direction: column;
 background-color: #fff;
 margin: 0rem 0 4rem 0;
-padding: 3rem 3rem;
+padding: 2rem 3rem;;
 border-bottom-left-radius: 20px;
 border-bottom-right-radius: 20px;
 .section-2{order: 1;}
@@ -43,13 +43,29 @@ border-bottom-right-radius: 20px;
   border-radius: 5px;
   border: 1px solid grey;
   background-color: #fff;
-  padding: 2rem 0;
+  padding: 1.5rem 0;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
   // font-size: 1.4rem;
 }
+.carousel-img{width: 100%}
 
 @media (min-width: 900px){
-  margin: 0;
+  background-color: transparent;
+  pading: 1rem 0;
+  flex-direction: row;
+  gap: 0 2rem;
+  .section-1{order: 1;background-color: #fff; }
+  .section-2{order: 2; flex: 4 1 0;}
+  .section-3{order: 3;flex: 1 1 0;}
 
+ 
+
+  [class^="section-"]{
+    border-radius: 20px;
+  }
 }
 
 `;
@@ -69,8 +85,8 @@ border-bottom-right-radius: 20px;
               </ul>
           </div>: 
           <div className="location-sort-btns">
-            <button> Location </button>
-            <button> Sort </button>
+            <button> <img src={locationIcon} alt="gps" /> <p>Location</p> </button>
+            <button> <img src={menuIcon} alt="categories" /> <p>Sort</p> </button>
           </div>
           }                  
         </div>
@@ -81,8 +97,8 @@ border-bottom-right-radius: 20px;
 
         {screenWidth > viewWidth?
         <div className="section-3">
-          <div>first</div>
-          <div>second</div>
+          <div></div>
+          <div></div>
         </div>: null}
   </Wrapper>
   )

@@ -68,26 +68,32 @@ const Header = () => {
     .menu {width: 100%;}
     .menu-wrapper{position: relative;}
     .menu-area{
-      align-items: 
-      center;order: 1;
+      align-items: center;
+      order: 1;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      
+      // gap: 6rem;
+      // padding: 0 0 0 6rem;
+           
     }  
     .search-area{order: 3;}  
     .account-area{order: 1;}  
 
 
     @media (min-width: 900px){
+      & section {
+        width: 50%; 
+      }
     box-shadow: none;
     flex-direction: row;
     margin-top: 4rem;
     padding: 3rem 0;
 
     .menu-area{
-      justify-content: space-evenly;
+      justify-content: space-around;
       order: 1;
+      width: 30%; 
     }  
     .search-area{order: 2;}  
     .account-area{order: 2;}  

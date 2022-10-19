@@ -10,7 +10,7 @@ box-shadow: 3px 4px 12px #979797;
 border-radius: 20px;
 padding: 1rem 2rem;
 height: 70vh;
-width: 20vw;
+width: 80vw;
 
 display: none;
 

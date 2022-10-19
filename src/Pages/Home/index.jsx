@@ -29,12 +29,12 @@ const profiles = [
   return (
        <div className={`product-${title === "Open Offers"? `offer`: 'wrapper'}`}>
         <section className='header-text'> 
-          <h3>
+          <h2>
             <p>{title}</p> {title==="Open Offers"? <img src={open_offers} alt="open offers"/>: ''}
-          </h3> 
-          <h3 className='see-all'>
+          </h2> 
+          <h2 className='see-all'>
             <p>See All </p>  {title==="Open Offers"? <img src={white_arrow} alt="See More" /> : <img src={arrow} alt="See More" />}
-          </h3>
+          </h2>
         </section>
 
           <section className={title === "Open Offers"? "products offers": "products "}>
