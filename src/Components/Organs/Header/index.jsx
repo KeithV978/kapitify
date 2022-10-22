@@ -167,7 +167,8 @@ const Header = () => {
                           key={title} 
                           id={title} 
                           NoOfChats={title === "Chat"? NoOfChats: ""}>
-                            <span><img src={icon} alt={title}/></span> {title}
+                            <span><img src={icon} alt={title}/></span> 
+                            <p>{title}</p>
                       </IconTextContainer>
               })}
           </section>

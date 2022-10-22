@@ -31,6 +31,10 @@ body{
 
 /* ************************************************* */
 /* GLOBAL STYLES TO AVOID REPITITIONS */
+h1{font-size: 5.9vw;}
+h2{font-size: 3.0vh}
+p{font-size: 2vmin}
+
 [class^="header-"]{
   font-family: firma-bold;
   display: flex;
