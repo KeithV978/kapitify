@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
 import styled from "styled-components";
+import { Button } from "../../../Components";
 
-import carousel from '../../../assets/slider_image.jpg';
+// import carousel from '../../../assets/slider_image.jpg';
 import locationIcon from '../../../assets/icons/Gps_fixed.svg';
 import menuIcon from '../../../assets/icons/Menu.svg';
+import down_arrow from '../../../assets/icons/arrow.svg'
 
 
 const Hero = () => {
@@ -14,6 +16,7 @@ const Hero = () => {
      window.addEventListener("resize", ()=>{
       setScreenWidth(window.screen.width)
      })
+
      return() =>{    
         window.removeEventListener("resize", ()=>{
           setScreenWidth(window.screen.width)
@@ -25,8 +28,9 @@ const Wrapper = styled.section`
 display: flex;
 flex-direction: column;
 background-color: #fff;
-margin: 0rem 0 4rem 0;
-padding: 2rem 3rem;;
+// margin: 0rem 0 4rem 0;
+gap: 1rem;
+padding: 1rem;
 border-bottom-left-radius: 20px;
 border-bottom-right-radius: 20px;
 .section-2{order: 1;}
@@ -35,8 +39,8 @@ border-bottom-right-radius: 20px;
 .location-sort-btns{
   display: flex;
   justify-content: space-between;
-  gap: 2rem;
-  margin: 2rem 0;
+  gap: 1rem;
+  margin: 1rem 0;
 }
 .location-sort-btns button{
   width: 100%;
@@ -51,39 +55,110 @@ border-bottom-right-radius: 20px;
   // font-size: 1.4rem;
 }
 .carousel-img{width: 100%}
-
+.search-by-location{
+  width: 13rem;
+}
+.location-header{font-weight: bold;}
+.select-category{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 @media (min-width: 900px){
   background-color: transparent;
   pading: 1rem 0;
   flex-direction: row;
-  gap: 0 2rem;
-  .section-1{order: 1;background-color: #fff; }
+  gap: 0 1rem;
+  .section-1{order: 1;}
   .section-2{order: 2; flex: 4 1 0;}
-  .section-3{order: 3;flex: 1 1 0;}
+  .section-3{order: 3; flex: 1 1 0;}
 
- 
+  .location-searchbar{
+    background-color: #fff;
+    border-radius: var(--radius);
+    padding: 1rem;
+    word-wrap: break-word;    
+    text-align: left;
+  }
+  .input{
+    font-size: 1vmax;
+    display: flex;
+    flex-direction: column;
+  }
+
+  & select {
+    background-color: #ededed;
+    border: none;
+    padding: .7rem 1.7rem;
+    margin: .5rem 0;
+    border-radius: 10px;
+} 
+  .location-searchbar div p{font-size: .9vmax;padding: .7rem 0 1rem;}
 
   [class^="section-"]{
-    border-radius: 20px;
+    background-color: transparent;
+  }
+  .apply-btn{
+    display: flex;
+    justify-content: right;
+    margin-top: 1rem;
+  }
+
+  .section-1-wrapper{
+    
+  }
+  .select-category{
+    margin-top: 1rem;
+    background-color:#fff;
+    border-radius: var(--radius);
   }
 }
 
 `;
 
-  const sortList = ["Art", "Books & Comics", "Clothing & Accessories", "Collectibles", "Consumer Electronics", 
-                    "Phones", "Tablets", "Consoles", "Music", "Automobiles", "School Accessories"];
+   const [cities, setCities] = useState([]);
+   const handleCitiesList = (event) =>{
+    setCities()
+   }
 
   return (
       <Wrapper>
         <div className="section-1">
          {screenWidth > viewWidth?
-         <div>
-            <ul className='categories-list'>
-                {sortList.map((item)=>{
-                  return <li key={item}> <a href="http://localhost:3000">{item}</a> </li>})
-                }
-              </ul>
-          </div>: 
+        <div className="section-1-wrapper">
+           <div className="search-by-location">
+            <div className="location-searchbar">
+              <div>
+                <h5 className="location-header">Enter Location</h5>
+                <p>Put in your current location to see swaps around you.</p>
+              </div>
+
+              <div style={{display: `flex`, justifyContent: `space-between`}}>
+                {[{label:"State", options:[""]},{label:"City/LGA", options:cities}].map((item)=>{
+                  let {label, options} = item;
+                  return <div className="input" key={options}>
+                            <label htmlFor={label}>{label}</label>
+                            <select onChange={handleCitiesList} name={label} id={label}>
+                                {options.map((opt)=>{
+                                  return <option key={opt} value={opt}>{opt}</option>
+                                })}
+                            </select>
+                         </div>
+                })}
+              </div>
+              <div className="apply-btn">
+                <Button color="#fff" padding="0.4rem 1.3rem">Apply</Button>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div className="select-category">
+              <h5>Select Category <i><img src={down_arrow} alt="select category" /></i></h5> 
+              <p>Select your preferred category.</p>
+            </div>
+          </div>
+        </div> : 
           <div className="location-sort-btns">
             <button> <img src={locationIcon} alt="gps" /> <p>Location</p> </button>
             <button> <img src={menuIcon} alt="categories" /> <p>Sort</p> </button>
@@ -92,15 +167,14 @@ border-bottom-right-radius: 20px;
         </div>
 
         <div className="section-2">
-          <img src={carousel} alt="carousel" className='carousel-img'/>
+          {/* <img src={carousel} alt="carousel" className='carousel-img'/> */}
         </div>
 
         {screenWidth > viewWidth?
         <div className="section-3">
-          <div></div>
-          <div></div>
+         
         </div>: null}
-  </Wrapper>
+      </Wrapper>
   )
 }
 

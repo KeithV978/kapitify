@@ -1,6 +1,5 @@
 // import { useState, useEffect } from "react";
 import styled from "styled-components";
-import { Container } from "../../../Components";
 import popular_swapper from '../../../assets/icons/popular_swappers.svg'
 import arrow from '../../../assets/icons/arrow.svg';
 
@@ -21,8 +20,7 @@ export const PopularSwapper = (props) => {
 //            })
 //       }
 //   },[])
-  return (
-    <Container padding="1rem 0">
+  return ( 
         <div className="popular_swaps_wrapper">
             <section className='header-text'> 
                 <h3 className="pop_swap_header"><p>Popular Swappers </p><img src={popular_swapper} alt="popular swappers" /></h3>  
@@ -38,7 +36,6 @@ export const PopularSwapper = (props) => {
                 
             </div>
         </div>
-    </Container>
   )
 }
 const SwapperProfile = ({profile}) => {
@@ -53,17 +50,17 @@ const SwapperProfile = ({profile}) => {
     `;
     const ProfileImage = styled.div`
         border-radius: 50%;
-        width: 100px;
-        height: 100px;
+        width: 5rem;
+        height: 5rem;
         background-image: url(${p_img});
         background-repeat: no-repeat;
         background-size: cover;
         position: relative;
-        margin: 3rem 0;
+        margin: 2rem 0 .1rem 0;
 
         @media (min-width: 700px){
-            width: 150px;
-            height: 150px;
+            width: 7rem;
+            height: 7rem;
 
             &:after { right: -15px; }
         }
@@ -75,11 +72,11 @@ const SwapperProfile = ({profile}) => {
             right: 0;
             background-color: #11f94e;
             border: 7px solid #fff;
-            width: 17px;
-            height: 17px;
+            width: .8rem;
+            height: .8rem;
             border-radius: 50%;
         }
-        h3 {
+        h4 {
             word-wrap: break-word;
             width: inherit;
         }
@@ -87,7 +84,7 @@ const SwapperProfile = ({profile}) => {
     return (
         <Wrapper>
             <ProfileImage/>
-            <h3>{name}</h3>
+            <h4>{name}</h4>
         </Wrapper>
     )
 }

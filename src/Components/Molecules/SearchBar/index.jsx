@@ -6,7 +6,8 @@ const SearchBar = () => {
     const Wrapper = styled.div`
     display: flex;
     flex-direction: row;
-    margin: 2rem 0;
+    margin: .1rem 0;
+    
 
     @media (min-width: 900px){
       margin: 0;
@@ -15,7 +16,7 @@ const SearchBar = () => {
     
   return (
     <Wrapper>
-        <Button bgColor="#06335b" text={searchIcon}/>
+        <Button padding=" 0 .6rem" radius="4px"> <img src={searchIcon} alt="search" /> </Button>
         <Input placeHolder="Find Item"/>
      </Wrapper>
   )

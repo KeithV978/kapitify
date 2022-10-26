@@ -1,18 +1,23 @@
-import styled from "styled-components"
+import styled, {keyframes} from "styled-components"
 
+const slideUp = keyframes`
+    0%{margin-top: 60px; opacity: 0;}
+    100%{margin-top: 0; opacity: 1;}
+`;
 const Wrapper = styled.nav`
 position: absolute;
-top:60px;
+top:90px;
 background-color: #fff;
 color: var(--primary);
 font-family: firma-semi-bold;
 box-shadow: 3px 4px 12px #979797;
 border-radius: 20px;
 padding: 1rem 2rem;
-height: 70vh;
-width: 80vw;
+width: 20vw;
+transition: all .4s ease-in;
+animation: ${slideUp} .4s ease-in;
 
-display: none;
+// display: none;
 
 & ul{
     display: flex;
@@ -25,7 +30,7 @@ display: none;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    // margin: 2rem 0;
+    margin: .6rem;
 }
 
 `;
@@ -37,7 +42,7 @@ const NavBar = (props) => {
         <ul>
             {listItems.map((item, index)=>{
             return <li key={index}>
-                        <p>{item}</p> 
+                        <a href="https://kapitify.com">{item}</a> 
                     </li>
             })}
         </ul>

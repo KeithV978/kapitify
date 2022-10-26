@@ -2,16 +2,26 @@
 import styled from "styled-components"
 
 const Button = (props) => {
-    let {type, text, border, bgColor, color} = props;
+    let {
+        children,
+        type, 
+        text, 
+        border, 
+        bgColor, 
+        color, 
+        padding, 
+        radius} = props;
     
     const StyledButton = styled.button`
+        display: inline-block;
         border: ${border || `none`};
-        border-radius: 5px;
-        background-color: ${bgColor};
+        border-radius: ${radius || `5px`};
+        background-color: ${bgColor || `var(--primary)`};
         color: ${color};
-        padding: 1rem;
+        padding: ${padding || `.5rem 1rem`};
+        
     `;
-    return<StyledButton type={type}><img src={text} alt="btn"/></StyledButton>
+    return<StyledButton type={type}>{children || text}</StyledButton>
 }
 
 

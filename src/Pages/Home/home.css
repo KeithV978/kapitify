@@ -18,51 +18,58 @@
     flex-direction: row;
     align-items: center;
     gap: .6rem;
+    
 }
 [class^="product-"]{
     overflow-x: hidden;
 } 
 .product-wrapper{
-    padding: 2rem;
-    margin: 0 0 4rem 0;
+    padding: 1rem;
+    border-radius: var(--radius);
 }
 .product-offer{padding: 0 0 1rem 0;}
 .product-offer,
 .product-wrapper{
-    margin: 0 0 4rem 0;  
+    margin: 0 0 1.7rem 0;  
     background-color: #fff;
-    border-radius: 25px;
 }
+.product-offer{margin-top: -1.7rem;}
 .product-offer .header-text{
     background-color: var(--primary);
     color: #fff;
     margin: 0;
-    padding: 2rem;
+    padding: 1.2rem;
 }
-.header-text h2 {
+.header-text h5 {
     display: flex;
     flex-direction: row;
     gap: .8rem;
 }
 .products{
-    margin:3rem 0;
-    padding: 3rem 1rem;
+    padding: 1rem 0;
     display: flex;
+    justify-content: center;
     flex-direction: row;
-    gap: 3.5rem; 
-    overflow-x: auto;   
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 1.5rem;
+    color: #8a8a8a;
 }
+
 .products::-webkit-scrollbar{display: none;}
-/* .products::-webkit-scrollbar-track{background-color: transparent;}
-.products::-webkit-scrollbar-thumb{background-color: #00000021;border-radius: 20px;width:4px;height: 2px;} */
+.products::-webkit-scrollbar-track{background-color: transparent;}
+.products::-webkit-scrollbar-thumb{background-color: #00000021;border-radius: 20px;width:4px;height: 2px;}
 
 .offers{
-    padding: 1rem 0 2rem 4rem;
+    padding: 1rem 2rem;
 }
 /* .white_arrow{stroke: #fff;} */
 .see-all{cursor: pointer;}
  
-.popular_swaps_wrapper{margin: 2rem 3rem;}
+.popular_swaps_wrapper{
+    padding: 2rem 1rem;
+    background-color: #fff;
+}
 .popular_swaps_wrapper .header-text p{
     color: #000;
 }
@@ -79,6 +86,14 @@
     flex-wrap: wrap;
     gap: 0 .8rem;
     justify-content:stretch;
+}
+@media only screen and (min-width: 550px) {
+    .products{
+        padding: 1rem;
+        overflow-x: auto;   
+        justify-content: left;
+        flex-wrap: nowrap;
+    }
 }
 @media only screen and (min-width: 900px) {
     .profiles_wrapper{

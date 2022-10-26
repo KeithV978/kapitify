@@ -1,5 +1,6 @@
 import product_image from './assets/product.png'
 import product_image2 from './assets/images/iphone.jpg'
+
 export const products = [
     {
         product_name: 'Iphone XR-',
@@ -7,6 +8,7 @@ export const products = [
         location: 'Benin City, Edo State',
         tag: 'verified',
         rating: 1,
+        grade: "Brand New",
         p_img: product_image2
     },
     {
@@ -15,6 +17,7 @@ export const products = [
         location: 'Benin City, Edo State',
         tag: 'Popular',
         rating: 4,
+        grade: "Used",
         p_img: product_image2
     },
     {
@@ -23,6 +26,7 @@ export const products = [
         location: 'Benin City, Edo State',
         tag: 'Popular',
         rating: 3,
+        grade: "Brand New",
         p_img: product_image2
     },
     {
@@ -31,6 +35,7 @@ export const products = [
         location: 'Benin City, Edo State',
         tag: 'Popular',
         rating: 3,
+        grade: "Refurbished",
         p_img: product_image
     },
     {
@@ -39,6 +44,7 @@ export const products = [
         location: 'Benin City, Edo State',
         tag: 'Popular',
         rating: 3,
+        grade: "Used",
         p_img: product_image2
     },
     {
@@ -47,6 +53,7 @@ export const products = [
         location: 'Benin City, Edo State',
         tag: 'Popular',
         rating: 5,
+        grade: "Brand New",
         p_img: product_image
     },
     {
@@ -55,6 +62,7 @@ export const products = [
         location: 'Benin City, Edo State',
         tag: 'Popular',
         rating: 3,
+        grade: "Refurbished",
         p_img: product_image2
     },
     {
@@ -63,6 +71,7 @@ export const products = [
         location: 'Benin City, Edo State',
         tag: 'Popular',
         rating: 3,
+        grade: "Brand New",
         p_img: product_image2
     },
     {
@@ -71,6 +80,7 @@ export const products = [
         location: 'Benin City, Edo State',
         tag: 'Popular',
         rating: 2,
+        grade: "Used",
         p_img: product_image
     },
     {
@@ -79,6 +89,7 @@ export const products = [
         location: 'Benin City, Edo State',
         tag: 'Popular',
         rating: 2,
+        grade: "Refurbished",
         p_img: product_image2
     }
 ]

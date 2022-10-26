@@ -1,3 +1,4 @@
+import {useState, useEffect} from 'react'
 import './home.css';
 import {Header, Card, Footer} from '../../Components';
 import Hero from './Hero'; 
@@ -26,20 +27,43 @@ const profiles = [
  ]
  
  const ProductsWrapper = ({title, data}) => {
+  const [screenWidth, setScreenWidth] = useState(window.screen.width);
+
+    useEffect(() =>{
+      // window.addEventListener("scroll", ()=> {
+      //   setScrollDistance(window.scrollY)
+        
+      //  })
+       window.addEventListener("resize", ()=>{
+        setScreenWidth(window.screen.width)
+       })
+      
+
+      return() =>{
+          // window.removeEventListener("scroll", ()=> {
+          //   setScrollDistance(window.scrollY)
+          // })
+          window.removeEventListener("resize", ()=>{
+            setScreenWidth(window.screen.width)
+           })
+      }
+  },[])
   return (
        <div className={`product-${title === "Open Offers"? `offer`: 'wrapper'}`}>
         <section className='header-text'> 
-          <h2>
+          <h5>
             <p>{title}</p> {title==="Open Offers"? <img src={open_offers} alt="open offers"/>: ''}
-          </h2> 
-          <h2 className='see-all'>
+          </h5> 
+          <h5 className='see-all'>
             <p>See All </p>  {title==="Open Offers"? <img src={white_arrow} alt="See More" /> : <img src={arrow} alt="See More" />}
-          </h2>
+          </h5>
         </section>
 
           <section className={title === "Open Offers"? "products offers": "products "}>
-            {data.map((product)=>{
+            {data.map((product, index)=>{
+              if(screenWidth <550) return <Card key={product} product={index < 4? {...product}: null}/>
               return <Card key={product} product={product}/>
+                
             })}
           </section>
        </div>    
@@ -51,6 +75,7 @@ const Home = () => {
     <div className='Home'>
         <Header/>
         <Hero /> 
+       
         {[
           "Recommended", 
           "Discover Swaps", 
@@ -58,9 +83,11 @@ const Home = () => {
         ].map((title)=> {
             return <ProductsWrapper key={title} title={title} data={products}/> 
           })}
+
         <div className="swappers_profile ">
-          <PopularSwapper profiles={profiles}/>
+            <PopularSwapper profiles={profiles}/>
         </div>
+        
         <Footer />
     </div>
   )

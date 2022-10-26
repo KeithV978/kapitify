@@ -8,30 +8,47 @@ import instagramIcon from '../../../assets/icons/instagram.svg'
 import styled from "styled-components"
 
 const Wrapper =  styled.div`
-color: #626262;
-background-color: #fff;
-padding: 3rem 4rem;
-margin: 4rem 0 0 0;
+color: #fff;
+background-color: #15212c;
+padding: 1rem 2rem;
+margin: 3rem 0 0 0;
 
 img{width: 100%;}
 
-.footer_list_section{gap:3rem 2rem; justify-content: space-around; padding: 4rem 0 2rem 0;}
-.footer_logo{width:120px; padding: 2rem 0;}
-.icon_links{ display: flex; flex-direction: row; gap: 2rem;}
-.social_icons{width: 25px;}
-.title{color: var(--primary); font-family: firma-bold; word-wrap: break-word; width: min-content;}
-.footer_list {min-width: 200px;}
-.footer_list ul li {margin: 4rem 0;}
-.copyright{text-align: center;}
-.copyright h4{line-height:40px;}
-.badge-coming{background-color: var(--primary); color: #fff; padding: .5rem .7rem; border-radius: 25px; font-size: .9rem}
-.pro-link{display: flex; flex-direction: row; gap:1rem}
+.footer_list_section{
+    gap:1rem 2rem; 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap; 
+    padding: 1.5rem 0 1.5rem 0;
+    
+}
 
+.footer_logo{width:7rem; padding: 1.5rem 0;}
+.icon_links{ display: flex; flex-direction: row; gap: 1.5rem;}
+.social_icons{width: 25px;}
+.title{color: var(--secondary); font-family: firma-bold; word-wrap: break-word; width: min-content;}
+
+[class^="footer_list-"]{
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+}
+// [class^="footer_list-"] ul {}
+[class^="footer_list-"] ul li {margin: 2rem 0;}
+.copyright{text-align: center; font-family: firma-bold, sans-serif;}
+.copyright h4{line-height:40px;}
+.badge-coming{background-color: var(--secondary); color: #fff; padding: .3rem .7rem; border-radius: 25px; font-size: .8rem}
+.pro-link{display: flex; flex-direction: row; gap:.6rem}
+.footer_list-support&resources{ text-align: right;}
 @media (min-width: 700px){
+    flex-wrap: no-wrap; 
+    .support&resources{ text-align: left;}
     .footer_list_section{
         justify-content: space-between;
     }
-    .footer_list {width: calc(100%/3 - 1rem);}
+    
 }
 `;
 const Footer = () => {
@@ -60,19 +77,19 @@ const Footer = () => {
             </div>
         </section>
 
-        <section className="footer_list_section flex">
+        <section className="footer_list_section">
             {[
                 {title:"Products", links:["How it works", "Features", "Browse Categories", "Kapitify Pro"]}, 
                 {title: "Support & Resources", links:["Blog", "FAQs", "About Us", "Contact Us"]}, 
                 {title: "Legal", links:["Terms & Conditions", "Privacy Policy"]}
             ].map((item)=>{
                 let {title, links} = item;
-                return <div key={item} className="footer_list">
+                return <div key={item} className={`footer_list-${title.toLowerCase().replace(/\s/g, '')}`}>
                             <h3 className='title'>{title}</h3>
                             <ul>
                                {links.map((link)=>{
                                 return  <li key={link}>
-                                            <a href="https://kapitify.com/">{link === "Kapitify Pro"? <span className='pro-link'><p>{link}</p> <span className="badge-coming">Coming Soon</span> </span> : link}</a>
+                                            <a href="https://kapitify.com/">{link === "Kapitify Pro"? <p className='pro-link'><p>{link}</p> <p className="badge-coming">Coming Soon</p> </p> : link}</a>
                                         </li>
                                })}
                             </ul>

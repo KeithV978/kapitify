@@ -1,40 +1,44 @@
 @import './assets/fonts/fonts.css';
 :root{
-  font-size: 62.5%;
-  --primary: #06335b;
-  --secondary: #56cb97;
+  
+  --primary: #06335B;
+  --secondary: #57CC99;
   --tab: 672px;
   --desktop: 990px;
-  --gap: 2rem;
-  --padding: 1rem;
+  --gap: 1rem;
+  --radius: 20px;
 }
 *{
   padding: 0;
-  margin: 0;
+  margin: 0; 
   box-sizing: border-box;
 }
-html{height: 100vh;width: 100%;}
+html{
+  height: 100vh;
+  width: 100%;
+  font-size: 16px;
+}
 body{
   width: 100%;
   height: 100%;
   scroll-behavior: smooth;
   overflow-x: hidden; 
-  font-size: 1.6rem;  
+  /* font-size: 1.6rem;   */
   font-family: firma-regular, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; 
   background-color: #f8f8f8;
 }
 
-.App{max-width: 1400px; margin: auto;overflow-x: scroll;} 
+.App{
+  max-width: 1400px; 
+  margin: auto;
+  overflow-x: hidden;} 
 
 
 /* ************************************************* */
 /* GLOBAL STYLES TO AVOID REPITITIONS */
-h1{font-size: 5.9vw;}
-h2{font-size: 3.0vh}
-p{font-size: 2vmin}
-
+ 
 [class^="header-"]{
   font-family: firma-bold;
   display: flex;
@@ -42,23 +46,27 @@ p{font-size: 2vmin}
   justify-content: space-between;
   background-color: transparent;
   color: var(--primary);
+  
 }
 [class^="card-"]{
   overflow-x: auto;
 }
 .flex,.flex-wrap{display: flex; flex-direction: column;}
 .flex-wrap{flex-wrap: wrap;}
+label{font-size: inherit;}
 li{list-style-type: none;}
-a{text-decoration: none; color: inherit;}
+a{text-decoration: none; color: inherit;align-items: center;}
 img{display: inline-block;}
+button{font-family: firma-light, sans-serif; cursor: pointer;}
 /* h1,h2,h3,h4,h5,h6{ color: inherit;} */
 
 @media only screen and (min-width: 481px) {
+  html{font-size: calc(16px + 6 * ((100vw - 320px) / 680));}
 }
 
 @media only screen and (min-width: 769px) {
   .flex,.flex-wrap{flex-direction: row;}
 }
-/* @media only screen and (min-width: 1024px) {
-
-} */
+@media only screen and (min-width: 1000px) {
+  html{font-size: 18px}
+}

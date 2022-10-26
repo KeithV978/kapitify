@@ -8,19 +8,21 @@ import heart from '../../../assets/icons/love.svg'
 
 const Wrapper = styled.div`
 box-shadow: -1px 5px 12px #ccc;
-border-radius: 20px;
-padding: 2rem;
-min-width: 200px;
+border-radius: var(--radius);
+padding: .5rem;
+min-width: 140px;
+max-width: 200px;
 position: relative;
+color: #4b4b4b;
 
-.tag img{ margin: 0 .4rem;}
 .tag{
     position: absolute;
-    top: 1rem;
+    top: .6rem;
+    left: 1rem;
     border-radius: 25px;
-    font-size: 1rem;
-    padding: .3rem 1rem;
-    font-family: firma-medium;
+    font-size: 1.6vmin;
+    padding: .1rem .5rem;
+    font-family: firma-medium, sans-serif;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -28,39 +30,62 @@ position: relative;
     box-shadow: 0px 5px 4px 0px #ebeaea;
     color: #737373;
     z-index: 10;
+    gap: .2rem;
 }
-.product_image{
-    width: 100%;
-}
-.product_image_wrapper{
-    // padding: .4rem 0;
-}
+.product_image{width: 100%;} 
 .location{
-    font-size: 1rem; 
+    font-size: .8vmax; 
     color: var(--secondary);
-    padding-top: .8rem;
+    padding-top: .4rem;
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: .4rem;
+    gap: .2rem;
 }
 .heart-icon{width: 100%;}
 .heart{
-    width: 40px;
+    width: 2rem;
     position: absolute;
-    bottom: 60px;
-    right: 10px;
+    bottom: 2rem;
+    right: .7rem;cursor: pointer;
 }
-
+.description div span p{
+    font-size: 1vmax;
+}
+@media (min-width: 360px){
+    width: 150px;
+}
+@media (min-width: 360px){
+    width: 170px;
+}
 @media (min-width: 700px){
+    min-width: 200px;
     .heart{
         // width: 40px;
     }
 }
 `;
+const Ribbon = styled.div`
+--f: .5rem;
+--r: .4rem;
+--t: .6rem;
+
+position: absolute;
+inset: var(--t) calc(-1*var(--f)) auto auto;
+padding: 0 .8rem var(--f) calc(1rem + var(--r));
+clip-path: polygon(0 0, 100% 0, 100% calc(100% - var(--f)), calc(100% - var(--f)) 100%,
+calc(100% - var(--f)) calc(100% - var(--f)), 0 calc(100% - var(--f)),
+var(--r) calc(50% - var(--f)/2));
+background-color: #8a8a8a;
+color: #fff;
+font-size: .5rem;
+box-shadow: 0 calc(-1*var(--f)) 0 inset #0005;
+
+`;
 
 const Card = ({product}) => {
-    let {tag, p_img, rating, product_name, swap_for, location} = product
+    if (product === null) return;
+    let {tag, p_img, rating, product_name, swap_for, location, grade} = product
   return (
     <Wrapper>
         <div className="tag"> <img src={tag === "verified"? verifiedIcon: popular} alt="verified"/> <p> {tag === "verified"? "Verified": "Popular"}</p> </div>
@@ -69,12 +94,13 @@ const Card = ({product}) => {
             <div>
                 <span>
                     <Rating stars={rating}/>
-                    <p>{product_name} <br/> <span style={{fontWeight: `bold`}}>Swap</span> {swap_for}</p>
+                    <a href="https://kapitify.com"><p>{product_name} <br/> <span style={{fontWeight: `bold`}}>Swap</span> {swap_for}</p></a>
                 </span>
             </div>
         </div>
         <div className="location"> <img src={locationIcon} alt="location" /> <p>{location}</p></div>
         <div className="heart"> <img src={heart} alt="heart" className="heart-icon"/>  </div>
+        <Ribbon bgColor={''}>{grade}</Ribbon>
     </Wrapper>
   )
 }
