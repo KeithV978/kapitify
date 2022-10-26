@@ -51,7 +51,7 @@ color: #4b4b4b;
     cursor: pointer;
 }
 .description div span p{
-    font-size: 1.5vmax;
+    font-size: 1vmax;
 } 
 @media (min-width: 700px){
     min-width: 200px;
@@ -59,6 +59,7 @@ color: #4b4b4b;
         // width: 40px;
     }
     .tag{font-size: 1.5vmin;}
+    .location{font-size: .8vmax;}
 }
 `;
 const Ribbon = styled.div`
@@ -74,7 +75,7 @@ calc(100% - var(--f)) calc(100% - var(--f)), 0 calc(100% - var(--f)),
 var(--r) calc(50% - var(--f)/2));
 background-color: #8a8a8a;
 color: #fff;
-font-size: .5rem;
+font-size: .6rem;
 box-shadow: 0 calc(-1*var(--f)) 0 inset #0005;
 
 `;

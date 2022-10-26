@@ -1,7 +1,10 @@
 import styled from "styled-components";
 
 const Wrapper = styled.div`
-display: flex; flex-direction: row; align-items: center;
+display: flex; 
+flex-direction: row; 
+align-items: center;
+
 & button{
     background-color: transparent;
     border: none;
@@ -27,7 +30,7 @@ const Rating = (props) => {
                 </button>
             })} 
            
-        </div>  <span style={{fontSize: `.8vmax`}}>{` (${stars}) `}</span>
+        </div>  <span style={{fontSize: `1vmax`}}>{` (${stars}) `}</span>
     </Wrapper>
   )
 }

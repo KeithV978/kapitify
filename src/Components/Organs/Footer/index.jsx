@@ -1,4 +1,4 @@
-import footer_logo from '../../../assets/icons/logo.svg';
+import footer_logo from '../../../assets/icons/white_logo.svg';
 import twitterIcon from '../../../assets/icons/twitter.svg'
 import facebookIcon from '../../../assets/icons/facebook.svg'
 import instagramIcon from '../../../assets/icons/instagram.svg'
@@ -8,8 +8,7 @@ import instagramIcon from '../../../assets/icons/instagram.svg'
 import styled from "styled-components"
 
 const Wrapper =  styled.div`
-color: #fff;
-
+color: #ebebeb;
 background-color:#011220;
 // background-color: #15212c;
 padding: 1rem 2rem;
@@ -41,9 +40,10 @@ img{width: 100%;}
 [class^="footer_list-"] ul li {margin: 2rem 0;}
 .copyright{text-align: center; font-family: firma-bold, sans-serif;}
 .copyright h4{line-height:40px;}
-.badge-coming{background-color: var(--secondary); color: #fff; padding: .3rem .7rem; border-radius: 25px; font-size: .8rem}
+.badge-coming{background-color: var(--secondary); color: #ebebeb; padding: .3rem .7rem; border-radius: 25px; font-size: .8rem}
 .pro-link{display: flex; flex-direction: row; gap:.6rem}
 .footer_list-support&resources{ text-align: right;}
+
 @media (min-width: 700px){
     flex-wrap: no-wrap; 
     .support&resources{ text-align: left;}
