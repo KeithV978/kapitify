@@ -8,7 +8,7 @@ display: flex; flex-direction: row; align-items: center;
     outline: none;
  }
 
-.star{font-size: 1.3vmax; }
+.star{font-size: 1.5vmax; }
     .on{color: #fbbc05; }
     .off { color: #fedc82;}
 `;

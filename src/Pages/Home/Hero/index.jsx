@@ -47,7 +47,7 @@ border-bottom-right-radius: 20px;
   border-radius: 5px;
   border: 1px solid grey;
   background-color: #fff;
-  padding: 1.5rem 0;
+  padding: 1rem 0;
   display: flex;
   text-align: center;
   align-items: center;

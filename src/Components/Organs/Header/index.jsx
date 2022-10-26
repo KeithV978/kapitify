@@ -56,10 +56,10 @@ const Header = () => {
     .navbar{display: none;}
     // .menu-icon:hover .navbar{display: block;}
 
-    .logo{width: 49%;}
+    .logo{width: 45%;}
 
     .account-icon-onMobile{
-      width: 90%;
+      width: 100%;
     }
 
     padding: 1rem;
@@ -87,6 +87,7 @@ const Header = () => {
 
     .search-area{order: 3;}  
     .account-area{order: 1;}  
+    .account {width: 8%;}
 
 
     @media (min-width: 769px){
@@ -96,6 +97,8 @@ const Header = () => {
       margin-top: 2rem;
       padding: 1rem 0;
 
+    .logo{width: 49%;}
+    .menu {width: 90%;}
     .menu-area{
       justify-content: space-around;
       order: 1;

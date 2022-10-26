@@ -10,8 +10,8 @@ const Wrapper = styled.div`
 box-shadow: -1px 5px 12px #ccc;
 border-radius: var(--radius);
 padding: .5rem;
-min-width: 140px;
-max-width: 200px;
+width: 150px;
+
 position: relative;
 color: #4b4b4b;
 
@@ -20,7 +20,7 @@ color: #4b4b4b;
     top: .6rem;
     left: 1rem;
     border-radius: 25px;
-    font-size: 1.6vmin;
+    font-size: 1vmax;
     padding: .1rem .5rem;
     font-family: firma-medium, sans-serif;
     display: flex;
@@ -34,7 +34,7 @@ color: #4b4b4b;
 }
 .product_image{width: 100%;} 
 .location{
-    font-size: .8vmax; 
+    font-size: 1vmax; 
     color: var(--secondary);
     padding-top: .4rem;
     display: flex;
@@ -47,22 +47,18 @@ color: #4b4b4b;
     width: 2rem;
     position: absolute;
     bottom: 2rem;
-    right: .7rem;cursor: pointer;
+    right: .7rem;
+    cursor: pointer;
 }
 .description div span p{
-    font-size: 1vmax;
-}
-@media (min-width: 360px){
-    width: 150px;
-}
-@media (min-width: 360px){
-    width: 170px;
-}
+    font-size: 1.5vmax;
+} 
 @media (min-width: 700px){
     min-width: 200px;
     .heart{
         // width: 40px;
     }
+    .tag{font-size: 1.5vmin;}
 }
 `;
 const Ribbon = styled.div`

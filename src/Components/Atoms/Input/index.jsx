@@ -8,7 +8,7 @@ const Input = (props) =>{
         border: 2px solid #ccc;
         // border-left-color: transparent;
         color: ${color || `#282828`};
-        padding: .3rem;
+        padding: 0.7rem;
         width: 100%;
 
         @media (min-width: 900px){

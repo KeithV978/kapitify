@@ -52,7 +52,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
-    gap: 1.5rem;
+    gap: 2rem;
     color: #8a8a8a;
 }
 
@@ -61,7 +61,7 @@
 .products::-webkit-scrollbar-thumb{background-color: #00000021;border-radius: 20px;width:4px;height: 2px;}
 
 .offers{
-    padding: 1rem 2rem;
+    padding: 1rem;
 }
 /* .white_arrow{stroke: #fff;} */
 .see-all{cursor: pointer;}
@@ -85,7 +85,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     gap: 0 .8rem;
-    justify-content:stretch;
+    justify-content: space-around;
 }
 @media only screen and (min-width: 550px) {
     .products{
