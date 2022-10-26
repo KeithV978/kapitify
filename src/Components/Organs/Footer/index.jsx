@@ -9,7 +9,9 @@ import styled from "styled-components"
 
 const Wrapper =  styled.div`
 color: #fff;
-background-color: #15212c;
+
+background-color:#011220;
+// background-color: #15212c;
 padding: 1rem 2rem;
 margin: 3rem 0 0 0;
 

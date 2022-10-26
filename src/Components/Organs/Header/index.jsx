@@ -1,7 +1,7 @@
 import {useState, useEffect} from 'react'
 import styled from 'styled-components'
 import {SearchBar} from '../../index'
-import Navbar from './NavBar';
+// import Navbar from './NavBar';
 
 
 // icons import
@@ -12,7 +12,7 @@ import logo from '../../../assets/icons/logo.svg'
 import Hamburger from '../../../assets/icons/Hamburger.svg'
 
 const Header = () => {
-    const [open, toggleMenu] = useState(false);
+    // const [open, toggleMenu] = useState(false);
     // const [scrollDistance, setScrollDistance] = useState(0);
     const [screenWidth, setScreenWidth] = useState(window.screen.width);
 
