@@ -5,7 +5,7 @@ import {
   Route
 } from "react-router-dom";
 import './App.css';
-import {PageLoading} from './Components'
+import {PageLoading, QuickMenu} from './Components'
 
 const Home = React.lazy(() => import("./Pages/Home"))
 
@@ -21,7 +21,9 @@ function App() {
             </React.Suspense> 
           }/>
         </Routes>
+        
       </Router>
+      <QuickMenu/>
     </div>
   );
 }

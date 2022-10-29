@@ -15,6 +15,7 @@ const Header = () => {
     // const [open, toggleMenu] = useState(false);
     // const [scrollDistance, setScrollDistance] = useState(0);
     const [screenWidth, setScreenWidth] = useState(window.screen.width);
+    const viewWidth = 750;
 
     useEffect(() =>{
       // window.addEventListener("scroll", ()=> {
@@ -87,10 +88,13 @@ const Header = () => {
 
     .search-area{order: 3;}  
     .account-area{order: 1;}  
-    .account {width: 8%;}
+    .account {width: 5%;}
 
+    @media (min-width: 481px){
+      .logo{width: 35%;}
+    }
 
-    @media (min-width: 769px){
+    @media (min-width: ${viewWidth}px){
       & section {width: 50%; }
       box-shadow: none;
       flex-direction: row;
@@ -147,7 +151,7 @@ const Header = () => {
               {/* <a href="https://kapitify.com" className='logo'><img src={logo} alt="logo" /></a> */}
               <img src={logo} alt="logo" className='logo'/>
 
-            {screenWidth <  769 ?
+            {screenWidth < viewWidth ?
             <div className="account">
               <img src={accountIcon} alt="account" className='account-icon-onMobile'/>
             </div>: null}
@@ -157,7 +161,7 @@ const Header = () => {
           <SearchBar />
         </section>
 
-        {screenWidth >  769 ?
+        {screenWidth >  viewWidth ?
           <section className="account-area flex">
             {[
               {title: "Accounts", icon: accountIcon},

@@ -10,7 +10,7 @@ import down_arrow from '../../../assets/icons/arrow.svg'
 
 const Hero = () => {
   const [screenWidth, setScreenWidth] = useState(window.screen.width);
-  const viewWidth = 900;
+  const viewWidth = 750;
   useEffect(() =>{
     
      window.addEventListener("resize", ()=>{
@@ -56,15 +56,21 @@ border-bottom-right-radius: 20px;
 }
 .carousel-img{width: 100%}
 .search-by-location{
-  width: 13rem;
+  width: 16rem;
 }
 .location-header{font-weight: bold;}
 .select-category{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  padding: 1rem;
 }
-@media (min-width: 900px){
+.select-category h5{
+  display: flex;
+  justify-content: space-between; 
+}
+.select-category p{
+  margin: .5rem 0;
+ font-size: 2vmin;
+}
+@media (min-width: ${viewWidth}px){
   background-color: transparent;
   pading: 1rem 0;
   flex-direction: row;
@@ -84,6 +90,9 @@ border-bottom-right-radius: 20px;
     font-size: 1vmax;
     display: flex;
     flex-direction: column;
+  }
+  .input > select {
+    width: 6rem;
   }
 
   & select {
@@ -147,7 +156,7 @@ border-bottom-right-radius: 20px;
                 })}
               </div>
               <div className="apply-btn">
-                <Button color="#fff" padding="0.4rem 1.3rem">Apply</Button>
+                <Button color="#fff" padding="0.6rem 1.9rem">Apply</Button>
               </div>
             </div>
           </div>

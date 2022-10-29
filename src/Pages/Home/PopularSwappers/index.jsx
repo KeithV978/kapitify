@@ -68,8 +68,8 @@ const SwapperProfile = ({profile}) => {
         &:after {
             content: "";
             position: absolute;
-            top: 0;
-            right: 0;
+            right: -0.2em;
+            right: -0.2em;
             background-color: #11f94e;
             border: 7px solid #fff;
             width: .8rem;

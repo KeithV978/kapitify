@@ -52,7 +52,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
-    gap: 2rem;
+    gap: 1.5rem;
     color: #8a8a8a;
 }
 
@@ -95,7 +95,7 @@
         flex-wrap: nowrap;
     }
 }
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 1200px) {
     .profiles_wrapper{
         gap: 0 3rem;
         justify-content:space-evenly;

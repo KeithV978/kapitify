@@ -17,7 +17,7 @@ const SearchBar = () => {
   return (
     <Wrapper>
         <Button padding=" 0 .6rem" radius="4px"> <img src={searchIcon} alt="search" /> </Button>
-        <Input placeHolder="Find Item"/>
+        <Input placeHolder="Find Item" margin="0 0 0 -4px"/>
      </Wrapper>
   )
 }

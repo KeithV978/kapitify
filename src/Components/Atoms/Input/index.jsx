@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 const Input = (props) =>{
-    let {type, placeHolder, name, radius, color} = props;
+    let {type, placeHolder, name, radius, color, margin} = props;
 
     const Wrapper = styled.input`
         border-radius: ${radius || `5px`};
@@ -10,6 +10,7 @@ const Input = (props) =>{
         color: ${color || `#282828`};
         padding: 0.7rem;
         width: 100%;
+        margin: ${margin};
 
         @media (min-width: 900px){
             padding: .5rem;

@@ -87,8 +87,9 @@ const Home = () => {
         <div className="swappers_profile ">
             <PopularSwapper profiles={profiles}/>
         </div>
-        
         <Footer />
+
+        
     </div>
   )
 }

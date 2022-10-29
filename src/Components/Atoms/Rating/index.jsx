@@ -11,7 +11,7 @@ align-items: center;
     outline: none;
  }
 
-.star{font-size: 1.5vmax; }
+.star{ font-size: 1.2vmax; }
     .on{color: #fbbc05; }
     .off { color: #fedc82;}
 `;

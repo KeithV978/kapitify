@@ -7,6 +7,7 @@ export { default as Rating} from './Atoms/Rating'
 
 // Molecules Export
 export { default as SearchBar} from './Molecules/SearchBar'
+export { default as QuickMenu} from './Molecules/QuickMenu'
 
 // Organs Export
 export { default as Header} from './Organs/Header'
