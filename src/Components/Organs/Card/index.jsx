@@ -28,7 +28,7 @@ color: #4b4b4b;
     flex-direction: row;
     align-items: center;
     width: fit-content;
-    box-shadow: 0px 5px 4px 0px #eeaea;
+    0px 4px 7px 0px #e1e1e1
     color: #737373;
     z-index: 10;
     gap: .2rem;
