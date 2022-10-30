@@ -11,9 +11,14 @@ align-items: center;
     outline: none;
  }
 
-.star{ font-size: 1.8vmax; }
+    .star{ font-size: 1.8vmax; }
     .on{color: #fbbc05; }
     .off { color: #fedc82;}
+    .rating_number{font-size: 1vmax;}
+    @media (min-width: 700px){
+        .star{ font-size: 1.2vmax; }
+        .rating_number{font-size: .9vmax;}
+    }
 `;
 const Rating = (props) => {
     let {stars} = props;
@@ -30,7 +35,7 @@ const Rating = (props) => {
                 </button>
             })} 
            
-        </div>  <span style={{fontSize: `1.7vmax`}}>{` (${stars}) `}</span>
+        </div>  <span className="rating_number">{` (${stars}) `}</span>
     </Wrapper>
   )
 }

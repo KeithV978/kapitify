@@ -57,7 +57,7 @@ const Header = () => {
     .navbar{display: none;}
     // .menu-icon:hover .navbar{display: block;}
 
-    .logo{  justify-content: center;}
+    .logo{ justify-content: center;}
 
     .account-icon-onMobile{
       width: 100%;
@@ -88,7 +88,7 @@ const Header = () => {
 
     .search-area{order: 3;}  
     .account-area{order: 1; display: flex; }  
-    .account {width: 5%;}
+    .account {width: 6%;}
 
     @media (min-width: 481px){
       .logo{width: 35%;}

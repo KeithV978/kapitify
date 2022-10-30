@@ -28,7 +28,7 @@ color: #4b4b4b;
     flex-direction: row;
     align-items: center;
     width: fit-content;
-    0px 4px 7px 0px #e1e1e1
+    box-shadow: 0px 4px 7px 0px #e1e1e1;
     color: #737373;
     z-index: 10;
     gap: .2rem;
@@ -43,6 +43,9 @@ color: #4b4b4b;
     flex-direction: row;
     align-items: center;
     gap: .2rem;
+}
+.location img{    
+    display: inline-block;
 }
 .heart-icon{width: 100%;}
 .heart{
@@ -61,15 +64,16 @@ color: #4b4b4b;
 @media (min-width: 550px){
     min-width: 10rem;
     .description div span p{
-        font-size: 1.9vmax;
+        font-size: 1.4vmax;
     } 
     .heart{width: 1.9rem;}
 }
 @media (min-width: 700px){
     min-width: 200px;
     .tag{font-size: 1.5vmin;}
-    .location{font-size: 1.7vmax;}
+    .location{font-size: .9vmax;}
     .heart{width: 2.2rem;}
+    .description div span p{font-size: 1.3vmax;} 
 }
 `;
 
