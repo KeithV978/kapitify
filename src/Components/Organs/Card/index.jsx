@@ -56,7 +56,7 @@ color: #4b4b4b;
     position: relative;
 }
 .description div span p{
-    font-size: 1.2vmax;
+    font-size: 1.7vmax;
 } 
 @media (min-width: 550px){
     min-width: 10rem;
