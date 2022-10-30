@@ -5,7 +5,7 @@ import { Button } from "../../../Components";
 // import sliderImage from '../../../assets/KapitifyFlyer1.jpg';
 import locationIcon from '../../../assets/icons/Gps_fixed.svg';
 import menuIcon from '../../../assets/icons/Menu.svg';
-import down_arrow from '../../../assets/icons/arrow.svg'
+import down_arrow from '../../../assets/icons/down_arrow.svg'
 
 
 const Hero = () => {
