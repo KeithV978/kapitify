@@ -1,5 +1,6 @@
 import product_image from './assets/product.png'
 import product_image2 from './assets/images/iphone.jpg'
+// import product_image3 from './assets/103895915_NjIwLTgyNy1hYjU3N2Q5ODRm.webp'
 
 export const products = [
     {

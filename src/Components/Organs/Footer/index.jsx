@@ -11,46 +11,56 @@ const Wrapper =  styled.div`
 color: #ebebeb;
 background-color:#011220;
 // background-color: #15212c;
-padding: 1rem 2rem;
+padding: 1rem;
 margin: 3rem 0 0 0;
 
 img{width: 100%;}
 
 .footer_list_section{
-    gap:1rem 2rem; 
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap; 
     padding: 1.5rem 0 1.5rem 0;
-    
+    width: 100%;   
 }
 
 .footer_logo{width:7rem; padding: 1.5rem 0;}
 .icon_links{ display: flex; flex-direction: row; gap: 1.5rem;}
 .social_icons{width: 25px;}
-.title{color: var(--secondary); font-family: firma-bold; word-wrap: break-word; width: min-content;}
+.title{font-size: .9rem;color: var(--secondary); font-family: firma-bold; word-wrap: break-word;}
 
 [class^="footer_list-"]{
-    min-width: 200px;
     display: flex;
     flex-direction: column;
 }
-// [class^="footer_list-"] ul {}
-[class^="footer_list-"] ul li {margin: 2rem 0;}
+.mid-section ul {text-align: right;}
+[class^="footer_list-"] ul li {margin: 2rem 0; font-size: .8rem;}
 .copyright{text-align: center; font-family: firma-bold, sans-serif;}
 .copyright h4{line-height:40px;}
-.badge-coming{background-color: var(--secondary); color: #ebebeb; padding: .3rem .7rem; border-radius: 25px; font-size: .8rem}
+.copyright h5, .copyright h4 {font-size: .8rem;}
+.badge-coming{background-color: var(--secondary); color: #ebebeb; padding: .3rem .7rem; border-radius: 25px; font-size: .5rem}
 .pro-link{display: flex; flex-direction: row; gap:.6rem}
-.footer_list-support&resources{ text-align: right;}
+.mid-section{ text-align: right;}
 
+@media (min-width: 550px){
+    padding:1rem 2rem;
+    [class^="footer_list-"]{
+        min-width: 200px;
+    }
+    .footer_list_section{
+        gap:1rem; 
+    }
+}
 @media (min-width: 700px){
+    .mid-section ul {text-align: left;}
     flex-wrap: no-wrap; 
-    .support&resources{ text-align: left;}
+    .footer_list-support&resources ul { text-align: left;}
     .footer_list_section{
         justify-content: space-between;
+        width: 90%;
     }
-    
+    .title{width: min-content}
 }
 `;
 const Footer = () => {
@@ -86,7 +96,9 @@ const Footer = () => {
                 {title: "Legal", links:["Terms & Conditions", "Privacy Policy"]}
             ].map((item)=>{
                 let {title, links} = item;
-                return <div key={item} className={`footer_list-${title.toLowerCase().replace(/\s/g, '')}`}>
+                let titles = title.toLowerCase().replace(/\s/g, '');
+
+                return <div key={item} className={`footer_list-${titles} ${titles==="support&resources"? 'mid-section': ``}`}>
                             <h3 className='title'>{title}</h3>
                             <ul>
                                {links.map((link)=>{

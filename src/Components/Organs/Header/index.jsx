@@ -15,7 +15,7 @@ const Header = () => {
     // const [open, toggleMenu] = useState(false);
     // const [scrollDistance, setScrollDistance] = useState(0);
     const [screenWidth, setScreenWidth] = useState(window.screen.width);
-    const viewWidth = 750;
+    const viewWidth = 550;
 
     useEffect(() =>{
       // window.addEventListener("scroll", ()=> {
@@ -57,7 +57,7 @@ const Header = () => {
     .navbar{display: none;}
     // .menu-icon:hover .navbar{display: block;}
 
-    .logo{width: 45%;}
+    .logo{  justify-content: center;}
 
     .account-icon-onMobile{
       width: 100%;
@@ -87,7 +87,7 @@ const Header = () => {
     }  
 
     .search-area{order: 3;}  
-    .account-area{order: 1;}  
+    .account-area{order: 1; display: flex; }  
     .account {width: 5%;}
 
     @media (min-width: 481px){
@@ -149,7 +149,9 @@ const Header = () => {
                 {/* <Navbar listItems={["How It Works", "Features", "Learn", "About", "FAQs", "Contact Us"]}/> */}
             </div>
               {/* <a href="https://kapitify.com" className='logo'><img src={logo} alt="logo" /></a> */}
-              <img src={logo} alt="logo" className='logo'/>
+              <div className='logo'>
+                <img src={logo} alt="logo" style={{width: `100%`}}/>
+              </div>
 
             {screenWidth < viewWidth ?
             <div className="account">
@@ -162,7 +164,7 @@ const Header = () => {
         </section>
 
         {screenWidth >  viewWidth ?
-          <section className="account-area flex">
+          <section className="account-area">
             {[
               {title: "Accounts", icon: accountIcon},
               {title: "Chat", icon: chatIcon},

@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import styled from "styled-components";
 import { Button } from "../../../Components";
 
-// import carousel from '../../../assets/slider_image.jpg';
+// import sliderImage from '../../../assets/KapitifyFlyer1.jpg';
 import locationIcon from '../../../assets/icons/Gps_fixed.svg';
 import menuIcon from '../../../assets/icons/Menu.svg';
 import down_arrow from '../../../assets/icons/arrow.svg'
@@ -28,12 +28,13 @@ const Wrapper = styled.section`
 display: flex;
 flex-direction: column;
 background-color: #fff;
+
 // margin: 0rem 0 4rem 0;
 gap: 1rem;
 padding: 1rem;
 border-bottom-left-radius: 20px;
 border-bottom-right-radius: 20px;
-.section-2{order: 1;}
+.section-2{order: 1; height: 100%; width: 100%;}
 .section-1{order: 2;}
 
 .location-sort-btns{
@@ -47,7 +48,7 @@ border-bottom-right-radius: 20px;
   border-radius: 5px;
   border: 1px solid grey;
   background-color: #fff;
-  padding: 1rem 0;
+  padding: .7rem 0;
   display: flex;
   text-align: center;
   align-items: center;
@@ -70,7 +71,15 @@ border-bottom-right-radius: 20px;
   margin: .5rem 0;
  font-size: 2vmin;
 }
+.image-slider{
+  background-image: url('../../../assets/KapitifyFlyer1.jpg');
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius);
+} 
 @media (min-width: ${viewWidth}px){
+  // height: 50vh;
   background-color: transparent;
   pading: 1rem 0;
   flex-direction: row;
@@ -104,6 +113,9 @@ border-bottom-right-radius: 20px;
 } 
   .location-searchbar div p{font-size: .9vmax;padding: .7rem 0 1rem;}
 
+  .location-sort-btns button{
+    padding: 1rem 0;
+  }
   [class^="section-"]{
     background-color: transparent;
   }
@@ -176,7 +188,8 @@ border-bottom-right-radius: 20px;
         </div>
 
         <div className="section-2">
-          {/* <img src={carousel} alt="carousel" className='carousel-img'/> */}
+          <div className="image-slider">
+          </div>
         </div>
 
         {screenWidth > viewWidth?

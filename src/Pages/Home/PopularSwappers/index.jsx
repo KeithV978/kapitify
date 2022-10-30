@@ -1,7 +1,7 @@
 // import { useState, useEffect } from "react";
 import styled from "styled-components";
 import popular_swapper from '../../../assets/icons/popular_swappers.svg'
-import arrow from '../../../assets/icons/arrow.svg';
+// import arrow from '../../../assets/icons/arrow.svg';
 
 
 export const PopularSwapper = (props) => {
@@ -25,7 +25,7 @@ export const PopularSwapper = (props) => {
             <section className='header-text'> 
                 <h3 className="pop_swap_header"><p>Popular Swappers </p><img src={popular_swapper} alt="popular swappers" /></h3>  
                 <h3 className='see-all'>
-                <p>See All </p> <img src={arrow} alt="See More" />
+                {/* <p>See All </p> <img src={arrow} alt="See More" /> */}
                 {/* {screenWidth < 900? <><p>See All </p> <img src={arrow} alt="See More" /> </>: null} */}
                 </h3>
             </section>
@@ -50,8 +50,8 @@ const SwapperProfile = ({profile}) => {
     `;
     const ProfileImage = styled.div`
         border-radius: 50%;
-        width: 5rem;
-        height: 5rem;
+        width: 5.5rem;
+        height: 5.5rem;
         background-image: url(${p_img});
         background-repeat: no-repeat;
         background-size: cover;
@@ -59,8 +59,8 @@ const SwapperProfile = ({profile}) => {
         margin: 2rem 0 .1rem 0;
 
         @media (min-width: 700px){
-            width: 7rem;
-            height: 7rem;
+            width: 8rem;
+            height: 8rem;
 
             &:after { right: -15px; }
         }
@@ -79,6 +79,7 @@ const SwapperProfile = ({profile}) => {
         h4 {
             word-wrap: break-word;
             width: inherit;
+            // font-size: .8rem;
         }
 `;
     return (

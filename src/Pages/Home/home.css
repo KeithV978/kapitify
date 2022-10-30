@@ -52,7 +52,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
-    gap: 1.5rem;
+    gap: .5rem;
     color: #8a8a8a;
 }
 
@@ -93,6 +93,7 @@
         overflow-x: auto;   
         justify-content: left;
         flex-wrap: nowrap;
+        gap: 1.5rem;
     }
 }
 @media only screen and (min-width: 1200px) {

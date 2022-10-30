@@ -47,8 +47,7 @@ body{
   flex-direction: row;
   justify-content: space-between;
   background-color: transparent;
-  color: var(--primary);
-  
+  color: var(--primary);  
 }
 [class^="card-"]{
   overflow-x: auto;

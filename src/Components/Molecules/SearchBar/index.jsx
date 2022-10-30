@@ -9,7 +9,7 @@ const SearchBar = () => {
     margin: .1rem 0;
     
 
-    @media (min-width: 900px){
+    @media (min-width: 550px){
       margin: 0;
     }
     `;

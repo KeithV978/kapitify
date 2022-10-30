@@ -10,16 +10,16 @@ const Wrapper = styled.div`
 box-shadow: -1px 5px 12px #ccc;
 border-radius: var(--radius);
 padding: .5rem;
-width: 9rem;
+width: 10rem;
 // min-width: 10vmax;
-
 position: relative;
+ 
 color: #4b4b4b;
 
 .tag{
     position: absolute;
     top: .6rem;
-    left: 1rem;
+    // left: 1rem;
     border-radius: 25px;
     font-size: 1vmax;
     padding: .1rem .5rem;
@@ -28,7 +28,7 @@ color: #4b4b4b;
     flex-direction: row;
     align-items: center;
     width: fit-content;
-    box-shadow: 0px 5px 4px 0px #ebeaea;
+    box-shadow: 0px 5px 4px 0px #eeaea;
     color: #737373;
     z-index: 10;
     gap: .2rem;
@@ -46,23 +46,30 @@ color: #4b4b4b;
 }
 .heart-icon{width: 100%;}
 .heart{
-    width: 2.5rem;
+    width: 1.6rem;
     position: absolute;
-    bottom: 1.8rem;
-    right: .7rem;
+   top: 0;
+   right: 0;
     cursor: pointer;
+}
+.description{
+    position: relative;
 }
 .description div span p{
     font-size: 1.2vmax;
 } 
 @media (min-width: 550px){
-    min-width: 18rem;
+    min-width: 10rem;
+    .description div span p{
+        font-size: 1.9vmax;
+    } 
+    .heart{width: 1.9rem;}
 }
 @media (min-width: 700px){
     min-width: 200px;
     .tag{font-size: 1.5vmin;}
-    .location{font-size: .8vmax;}
-    .heart{bottom: 3rem;}
+    .location{font-size: 1.7vmax;}
+    .heart{width: 2.2rem;}
 }
 `;
 
@@ -98,9 +105,10 @@ const Card = ({product}) => {
                     <a href="https://kapitify.com"><p>{product_name} <br/> <span style={{fontWeight: `bold`}}>Swap</span> {swap_for}</p></a>
                 </span>
             </div>
+            <div className="heart"> <img src={heart} alt="heart" className="heart-icon"/>  </div>
         </div>
         <div className="location"> <img src={locationIcon} alt="location" /> <p>{location}</p></div>
-        <div className="heart"> <img src={heart} alt="heart" className="heart-icon"/>  </div>
+       
         {/* <Ribbon bgColor={''}>{grade}</Ribbon> */}
     </Wrapper>
   )
