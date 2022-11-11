@@ -22,7 +22,7 @@ color: #4b4b4b;
     // left: 1rem;
     border-radius: 25px;
     font-size: 1vmax;
-    padding: .1rem .5rem;
+    padding: .3rem .6rem;
     font-family: firma-medium, sans-serif;
     display: flex;
     flex-direction: row;
