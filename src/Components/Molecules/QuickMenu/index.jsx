@@ -61,7 +61,7 @@ const QuickMenu = () => {
 
     // return() =>{
         // window.removeEventListener("scroll", ()=> setShowQuickMenu(false))
-    }
+    // }
 // }, [setShowQuickMenu, setPosition])
    
   return (
