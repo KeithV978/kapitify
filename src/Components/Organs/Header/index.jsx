@@ -50,13 +50,14 @@ const Header = () => {
     
     // & div { margin-right: .2rem; text-align:center;}
     & p {font-size:1.2vmax;}
-
+    
+    .navbar{display: none;}
     .menu-wrapper{position: relative;}
+    .menu-wrapper:hover .navbar{display: block;}
+    
 
     .menu-icon{cursor: pointer;}
-    .navbar{display: none;}
-    .menu-icon:hover .navbar{display: block;}
-
+  
     .logo{ justify-content: center;}
 
     .account-icon-onMobile{

@@ -19,7 +19,7 @@ const Button = (props) => {
         background-color: ${bgColor || `var(--primary)`};
         color: ${color};
         padding: ${padding || `.5rem 1rem`};
-        z-index: 2;
+        // z-index: 1;
     `;
     return<StyledButton type={type}>{children || text}</StyledButton>
 }

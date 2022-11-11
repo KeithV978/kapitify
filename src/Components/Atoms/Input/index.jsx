@@ -11,6 +11,7 @@ const Input = (props) =>{
         padding: 0.6rem;
         width: 100%;
         margin: ${margin};
+        z-index: -1;
 
         @media (min-width: 900px){
             padding: .5rem;

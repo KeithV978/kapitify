@@ -34,7 +34,7 @@ gap: 1rem;
 padding: 1rem;
 border-bottom-left-radius: 20px;
 border-bottom-right-radius: 20px;
-.section-2{order: 1; height: 100%; width: 100%;}
+.section-2{order: 1; height: 100px; width: 100%;}
 .section-1{order: 2;}
 
 .location-sort-btns{
@@ -75,7 +75,7 @@ border-bottom-right-radius: 20px;
   background-image: url('../../../assets/KapitifyFlyer1.jpg');
   background-size: contain;
   width: 100%;
-  height: 100%;
+  height: 100px;
   border-radius: var(--radius);
 } 
 @media (min-width: ${viewWidth}px){

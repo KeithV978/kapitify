@@ -6,7 +6,8 @@ const slideUp = keyframes`
 `;
 const Wrapper = styled.nav`
 position: absolute;
-top:90px;
+top:1rem;
+z-index: 100;
 background-color: #fff;
 color: var(--primary);
 font-family: firma-semi-bold;
