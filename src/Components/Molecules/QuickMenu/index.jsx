@@ -1,8 +1,8 @@
 // import { useState, useEffect } from "react";
 import styled from "styled-components";
-// import homeIcon from '../../../assets/icons/home.svg'
-// import heartIcon from '../../../assets/icons/heart_grey.svg'
-// import chatIcon from '../../../assets/icons/chat.svg'
+import homeIcon from '../../../assets/icons/home.svg'
+import heartIcon from '../../../assets/icons/heart_grey.svg'
+import chatIcon from '../../../assets/icons/chat.svg'
 
 const Wrapper = styled.div`
     width: 100%;
@@ -65,7 +65,8 @@ const QuickMenu = () => {
 // }, [setShowQuickMenu, setPosition])
    
   return (
-    <Wrapper style={showQuickMenu? {bottom: `-80px`}: {}}>
+    // <Wrapper style={showQuickMenu? {bottom: `-80px`}: {}}>
+    <Wrapper>
       <div>
         <ul>
           <li><img src={chatIcon} alt="menu-icon-1" /></li>
