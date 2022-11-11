@@ -50,18 +50,20 @@ const QuickMenu = () => {
   useEffect(() =>{
     window.addEventListener("scroll", ()=> {
       console.log("scrolling "+window.scrollY)
-      if((position - window.scrollY) > 50 || (window.scrollY - position) > 50){
+      if((position - window.scrollY) > 20 || (window.scrollY - position) > 20){
         setShowQuickMenu(false)
+        setPosition(window.screenY)
       }else{
         setShowQuickMenu(true)
+        setPosition(window.screenY)
       } 
-      setPosition(window.scrollY);
+      // setPosition(window.scrollY);
     })
 
     return() =>{
         window.removeEventListener("scroll", ()=> setShowQuickMenu(false))
     }
-}, [])
+}, [setPosition, setShowQuickMenu])
    
   return (
     <Wrapper style={showQuickMenu? {bottom: `-80px`, opacity: `0`}: {bottom: `20px`, opacity: `1`}}>
