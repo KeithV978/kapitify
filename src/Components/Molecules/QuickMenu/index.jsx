@@ -63,7 +63,7 @@ const QuickMenu = () => {
     return() =>{
         window.removeEventListener("scroll", ()=> setShowQuickMenu(false))
     }
-}, [setPosition, setShowQuickMenu])
+}, [position, showQuickMenu])
    
   return (
     <Wrapper style={showQuickMenu? {bottom: `-80px`, opacity: `0`}: {bottom: `20px`, opacity: `1`}}>

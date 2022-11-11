@@ -1,7 +1,7 @@
 import {useState, useEffect} from 'react'
 import styled from 'styled-components'
 import {SearchBar} from '../../index'
-// import Navbar from './NavBar';
+import Navbar from './NavBar';
 
 
 // icons import
@@ -55,7 +55,7 @@ const Header = () => {
 
     .menu-icon{cursor: pointer;}
     .navbar{display: none;}
-    // .menu-icon:hover .navbar{display: block;}
+    .menu-icon:hover .navbar{display: block;}
 
     .logo{ justify-content: center;}
 
@@ -145,7 +145,9 @@ const Header = () => {
         <section className="menu-area">
             <div className="menu-wrapper">
                 <img src={Hamburger} alt="Menu Icon"  className='menu-icon'/> {/* this has to change. Cannot be an image */}
-                {/* <Navbar listItems={["How It Works", "Features", "Learn", "About", "FAQs", "Contact Us"]}/> */}
+                <span className='navbar'>
+                  <Navbar listItems={["How It Works", "Features", "Learn", "About", "FAQs", "Contact Us"]}/>
+                </span>
             </div>
               {/* <a href="https://kapitify.com" className='logo'><img src={logo} alt="logo" /></a> */}
               <div className='logo'>
