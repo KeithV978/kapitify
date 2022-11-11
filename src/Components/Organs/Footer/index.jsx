@@ -33,6 +33,7 @@ img{width: 100%;}
 [class^="footer_list-"]{
     display: flex;
     flex-direction: column;
+    min-width: 160px;
 }
 .mid-section ul {text-align: right;}
 [class^="footer_list-"] ul li {margin: 2rem 0; font-size: .8rem;}

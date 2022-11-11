@@ -85,7 +85,6 @@
     flex-direction: row;
     flex-wrap: wrap;
     gap: 0 .8rem;
-    justify-content: space-around;
 }
 @media only screen and (min-width: 550px) {
     .products{
@@ -94,11 +93,18 @@
         justify-content: left;
         flex-wrap: nowrap;
         gap: 1.5rem;
+        
     }
+    /* .profiles_wrapper{justify-content: space-between;} */
 }
+@media only screen and (min-width: 768px) {
+
+}
+
 @media only screen and (min-width: 1200px) {
     .profiles_wrapper{
         gap: 0 3rem;
         justify-content:space-evenly;
     }
+    
 }

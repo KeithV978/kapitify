@@ -17,8 +17,8 @@ const PgLoading = styled.div`
         transform: translate(-50%, -50%);
         width: 50px;
         height: 50px;
-        border:3px solid #56cb97;
-        border-top-color: #06335b;
+        border:3px solid var(--secondary);
+        border-top-color: var(--primary);
         border-radius: 50%;
         animation: ${rotate} 3s linear infinite;
     }

@@ -1,10 +1,16 @@
+import { useState, useEffect } from "react";
 import styled from "styled-components";
+import homeIcon from '../../../assets/icons/home.svg'
+import heartIcon from '../../../assets/icons/heart_grey.svg'
+import chatIcon from '../../../assets/icons/chat.svg'
 
 const Wrapper = styled.div`
     width: 100%;
     display: block;
     position:fixed;
     bottom: 20px;
+    transition: all .4s ease-in;
+    z-index: 1000;
     
 
     & div {
@@ -12,30 +18,59 @@ const Wrapper = styled.div`
     }
 
     & ul {  
-      margin: auto 0;
-      border-radius: var(--radius);
+      margin: auto;
+      width: 70%;
+      border-radius: calc(var(--radius) + 10px);
       background-color: #fff;
-      width: min-content;
-      padding: .8rem 1rem;
-      justify-content: center;
+      // width: min-content;
+      padding: .8rem 0;
+      // justify-content: center;
       display: flex;
       flex-direction: row;
-      justify-content-space-evenly;
+      justify-content: space-around;
+      border: 1px solid silver;
     }
 
+    & li {
+      // flex-basis: 33.3%;
+      // justify-content: center;
+    }
+    & img {
+      width: 130%;
+    }
     @media (min-width: 550px){
         display: none;
     }
 `;
 
 const QuickMenu = () => {
+  const [position, setPosition] = useState(window.screenY);
+  const {showQuickMenu, setShowQuickMenu} = useState(true);
+
+  useEffect(() =>{
+    window.addEventListener("scroll", ()=> {
+      console.log("scrolling "+window.scrollY)
+    //   if((position - window.scrollY) > 10 || (window.scrollY - position) > 10){
+    //     setShowQuickMenu(false)
+       
+    //   }else{
+    //     setShowQuickMenu(true)
+    //   } 
+    //   setPosition(window.scrollY);
+    })
+
+    return() =>{
+        window.removeEventListener("scroll", ()=> setShowQuickMenu(false))
+    }
+}, [setShowQuickMenu, setPosition])
+   
   return (
-    <Wrapper>
+    <Wrapper style={showQuickMenu? {bottom: `-80px`}: {}}>
       <div>
         <ul>
-          <li>a</li>
-          <li>b</li>
-          <li>c</li>
+          <li><img src={chatIcon} alt="menu-icon-1" /></li>
+          <li><img src={homeIcon} alt="home-icon-2" /></li>
+          <li><img src={heartIcon} alt="heart-icon-3" /> </li>
         </ul>
       </div>
     </Wrapper>

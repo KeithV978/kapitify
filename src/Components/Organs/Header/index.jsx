@@ -121,7 +121,6 @@ const Header = () => {
       position: relative;
       align-items: center;
       gap: .2rem;
-      
      
       // For The Chat Badge
      ${props => props.id === "Chat"? 

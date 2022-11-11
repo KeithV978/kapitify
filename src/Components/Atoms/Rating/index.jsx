@@ -4,6 +4,7 @@ const Wrapper = styled.div`
 display: flex; 
 flex-direction: row; 
 align-items: center;
+.rating_number{display: contents;}
 
 & button{
     background-color: transparent;
@@ -15,8 +16,9 @@ align-items: center;
     .on{color: #fbbc05; }
     .off { color: #fedc82;}
     .rating_number{font-size: 1vmax;}
+
     @media (min-width: 700px){
-        .star{ font-size: 1.2vmax; }
+        .star{ font-size: 1vmax; }
         .rating_number{font-size: .9vmax;}
     }
 `;

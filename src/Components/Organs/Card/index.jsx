@@ -10,7 +10,7 @@ const Wrapper = styled.div`
 box-shadow: -1px 5px 12px #ccc;
 border-radius: var(--radius);
 padding: .5rem;
-width: 10rem;
+width: 9rem;
 // min-width: 10vmax;
 position: relative;
  
@@ -59,21 +59,24 @@ color: #4b4b4b;
     position: relative;
 }
 .description div span p{
-    font-size: 1.7vmax;
+    font-size: 1.9vmax;
 } 
 @media (min-width: 550px){
-    min-width: 10rem;
+    min-width: 8rem;
     .description div span p{
         font-size: 1.4vmax;
     } 
     .heart{width: 1.9rem;}
 }
 @media (min-width: 700px){
-    min-width: 200px;
-    .tag{font-size: 1.5vmin;}
-    .location{font-size: .9vmax;}
+    min-width: 175px;
+    .tag{font-size: 1.2vmin;}
+    .location{font-size: .8vmax;}
     .heart{width: 2.2rem;}
-    .description div span p{font-size: 1.3vmax;} 
+    .description div span p{font-size: 1vmax;} 
+}
+@media (min-width: 1200px){
+    .tag{font-size: 1.5vmin;}
 }
 `;
 
