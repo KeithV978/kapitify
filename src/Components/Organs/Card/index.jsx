@@ -10,7 +10,7 @@ const Wrapper = styled.div`
 box-shadow: -1px 5px 12px #ccc;
 border-radius: var(--radius);
 padding: .5rem;
-width: 9.8rem;
+width: 9.5rem;
 // min-width: 10vmax;
 position: relative;
  
@@ -49,10 +49,10 @@ color: #4b4b4b;
 }
 .heart-icon{width: 100%;}
 .heart{
-    width: 1.6rem;
+    width: 2rem;
     position: absolute;
-   top: 0;
-   right: 0;
+    top: 0;
+    right: 0;
     cursor: pointer;
 }
 .description{

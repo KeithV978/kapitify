@@ -1,4 +1,4 @@
-// import { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import styled from "styled-components";
 import homeIcon from '../../../assets/icons/home.svg'
 import heartIcon from '../../../assets/icons/heart_grey.svg'
@@ -44,29 +44,28 @@ const Wrapper = styled.div`
 `;
 
 const QuickMenu = () => {
-  // const [position, setPosition] = useState(window.screenY);
-  // const {showQuickMenu, setShowQuickMenu} = useState(true);
+  const [position, setPosition] = useState(window.screenY);
+  const [showQuickMenu, setShowQuickMenu] = useState(true);
 
-  // useEffect(() =>{
-  //   window.addEventListener("scroll", ()=> {
-  //     console.log("scrolling "+window.scrollY)
-    //   if((position - window.scrollY) > 10 || (window.scrollY - position) > 10){
-    //     setShowQuickMenu(false)
-       
-    //   }else{
-    //     setShowQuickMenu(true)
-    //   } 
-    //   setPosition(window.scrollY);
-    // })
+  useEffect(() =>{
+    window.addEventListener("scroll", ()=> {
+      console.log("scrolling "+window.scrollY)
+      if((position - window.scrollY) > 50 || (window.scrollY - position) > 50){
+        setShowQuickMenu(false)
+      }else{
+        setShowQuickMenu(true)
+      } 
+      setPosition(window.scrollY);
+    })
 
-    // return() =>{
-        // window.removeEventListener("scroll", ()=> setShowQuickMenu(false))
-    // }
-// }, [setShowQuickMenu, setPosition])
+    return() =>{
+        window.removeEventListener("scroll", ()=> setShowQuickMenu(false))
+    }
+}, [])
    
   return (
-    // <Wrapper style={showQuickMenu? {bottom: `-80px`}: {}}>
-    <Wrapper>
+    <Wrapper style={showQuickMenu? {bottom: `-80px`, opacity: `0`}: {bottom: `20px`, opacity: `1`}}>
+    {/* <Wrapper> */}
       <div>
         <ul>
           <li><img src={chatIcon} alt="menu-icon-1" /></li>
