@@ -10,7 +10,7 @@ const Wrapper = styled.div`
 box-shadow: -1px 5px 12px #ccc;
 border-radius: var(--radius);
 padding: .5rem;
-width: 9rem;
+width: 9.8rem;
 // min-width: 10vmax;
 position: relative;
  

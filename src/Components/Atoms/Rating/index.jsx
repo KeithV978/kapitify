@@ -15,7 +15,7 @@ align-items: center;
     .star{ font-size: 1.8vmax; }
     .on{color: #fbbc05; }
     .off { color: #fedc82;}
-    .rating_number{font-size: 1vmax;}
+    .rating_number{font-size: 1.2vmax;}
 
     @media (min-width: 700px){
         .star{ font-size: 1vmax; }
