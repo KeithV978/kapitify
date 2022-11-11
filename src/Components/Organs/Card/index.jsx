@@ -58,12 +58,12 @@ color: #4b4b4b;
 .description{
     position: relative;
 }
-.description div span p{
+.description div  p{
     font-size: 1.9vmax;
 } 
 @media (min-width: 550px){
     min-width: 8rem;
-    .description div span p{
+    .description div  p{
         font-size: 1.4vmax;
     } 
     .heart{width: 1.9rem;}
@@ -73,7 +73,7 @@ color: #4b4b4b;
     .tag{font-size: 1.2vmin;}
     .location{font-size: .8vmax;}
     .heart{width: 2.2rem;}
-    .description div span p{font-size: 1vmax;} 
+    .description div  p{font-size: 1vmax;} 
 }
 @media (min-width: 1200px){
     .tag{font-size: 1.5vmin;}
@@ -107,10 +107,8 @@ const Card = ({product}) => {
         <div className="product_image_wrapper"> <img src={p_img} alt="product" className="product_image"/> </div>
         <div className="description">
             <div>
-                <span>
-                    <Rating stars={rating}/>
-                    <a href="https://kapitify.com"><p>{product_name} <br/> <span style={{fontWeight: `bold`}}>Swap</span> {swap_for}</p></a>
-                </span>
+                <Rating stars={rating}/>
+                <a href="https://kapitify.com"><p>{product_name} <br/> <span style={{fontWeight: `bold`}}>Swap</span> {swap_for}</p></a>
             </div>
             <div className="heart"> <img src={heart} alt="heart" className="heart-icon"/>  </div>
         </div>
